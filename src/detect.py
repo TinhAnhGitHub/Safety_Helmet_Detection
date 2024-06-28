@@ -1,9 +1,11 @@
 from ultralytics import YOLO
 import cv2
 import numpy as np
+import os
 
 
 def detect_helmet(image):
+    print(os.listdir("../runs/detect/train/weights"))
     model = YOLO('../runs/detect/train/weights/best.pt')
     results = model.predict(image)
     annotated_image = results[0].plot()
