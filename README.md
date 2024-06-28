@@ -21,3 +21,28 @@ This project aims to enhance safety on construction sites by using state-of-the-
 * **OpenCV**: Utilized for image processing and handling video data in the future expansion.
 
 This project is designed to provide a simple yet practical and efficient solution to enhance safety measures on construction sites by leveraging the latest advancements in computer vision and machine learning.
+
+## 3. How to Install and Run the Project
+
+1. Git clone this project
+```sh
+git clone https://github.com/TinhAnhGitHub/Safety_Helmet_Detection.git
+```
+
+2. Create virtual environment, and activate it
+```sh
+python -m venv venv
+.\venv\Scripts\activate
+```
+
+3. Go to folder yolov10, install the requirements and ultralytics
+```
+pip install -r requirements.txt
+```
+
+4. Run the streamlit application, feel free to use the test images in the Safety_Helmet_Dataset
+```sh
+streamlit run app.py
+```
+## 4. Demo
+[Demo using Streamlit Deployment](https://safetyhelmetdetection.streamlit.app/)
