@@ -45,4 +45,4 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 ## 4. Demo
-[Demo using Streamlit Deployment](https://safetyhelmetdetection.streamlit.app/)
+[Demo using Streamlit Deployment](https://safetyhelmetdetection-p5d5n6rvnn4kgzf7uopwdk.streamlit.app/)
