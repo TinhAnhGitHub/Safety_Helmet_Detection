@@ -7,8 +7,8 @@ import os
 
 def detect_helmet(image):
     st.write(os.getcwd())
-    print(os.listdir("../runs/detect/train/weights"))
-    model = YOLO('../runs/detect/train/weights/best.pt')
+    # print(os.listdir("../runs/detect/train/weights"))
+    model = YOLO('./runs/detect/train/weights/best.pt')
     results = model.predict(image)
     annotated_image = results[0].plot()
 
