@@ -6,7 +6,7 @@ import os
 
 
 def detect_helmet(image):
-    st.write(os.getcwd())
+    # st.write(os.getcwd())
     # print(os.listdir("../runs/detect/train/weights"))
     model = YOLO('./runs/detect/train/weights/best.pt')
     results = model.predict(image)
