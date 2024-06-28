@@ -1,11 +1,12 @@
 from ultralytics import YOLO
 import cv2
 import numpy as np
+import streamlit as st
 import os
 
 
 def detect_helmet(image):
-    print("Current working directory:", os.getcwd())
+    st.write(os.getcwd())
     print(os.listdir("../runs/detect/train/weights"))
     model = YOLO('../runs/detect/train/weights/best.pt')
     results = model.predict(image)
