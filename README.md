@@ -7,6 +7,10 @@ This project uses YOLOv10 for object detection to determine whether construction
 
 [Click here to have more detail about the dataset](https://universe.roboflow.com/dataperson/safety-helmet-dataset-uvh1t)
 
+[Click here to download the model's weight](https://drive.google.com/file/d/1jwxJkd9bAY2TGapzkvvGmM_Uop-XehS_/view?usp=sharing)
+
+
+
 ## 2. Project Description
 This project aims to enhance safety on construction sites by using state-of-the-art object detection techniques. We employ the YOLOv10 model to determine whether construction workers are wearing safety helmets. The initial implementation allows the application to process image inputs to identify helmet usage. The future goal is to expand this capability to real-time detection using a webcam, providing continuous monitoring and ensuring compliance with safety regulations.
 
@@ -22,6 +26,28 @@ This project aims to enhance safety on construction sites by using state-of-the-
 
 This project is designed to provide a simple yet practical and efficient solution to enhance safety measures on construction sites by leveraging the latest advancements in computer vision and machine learning.
 
+## 3. Folder Structure and Installation
+```txt
+Safety_Helmet_Detection/
+├── .gitignore
+├── app.py
+├── README.md
+├── requirements.txt
+├── sonar-project.properties
+├── tmp.py
+├── .github/
+│   ├── workflows/
+│   │   ├── build.yml
+├── models/ 
+│   ├── best.pt
+├── src/
+│   ├── detect.py
+│   ├── train.py
+```
+
+- Download the model's weights, create a folder in the Safety_Helmet_Detection repo, name it `models`, and put the weight in that folder 
+
+
 ## 3. How to Install and Run the Project
 
 1. Git clone this project
@@ -35,12 +61,15 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-3. Go to folder yolov10, install the requirements and ultralytics
+3. Install dependencies
 ```
 pip install -r requirements.txt
 ```
 
-4. Run the streamlit application, feel free to use the test images in the Safety_Helmet_Dataset
+
+
+
+4. Run the streamlit application, don't forget to create the `models` and download the weight
 ```sh
 streamlit run app.py
 ```

@@ -1,8 +1,25 @@
+import os
+import sys
+def get_project_root() -> str:
+    current_abspath = os.path.abspath(os.getcwd())
+    while True:
+        if os.path.split(current_abspath)[1] == 'Safety_Helmet_Detection':
+            project_root = current_abspath
+            break
+        else:
+            current_abspath = os.path.dirname(current_abspath)
+    
+    return project_root
+
+PROJECR_ROOT = get_project_root()
+os.chdir(PROJECR_ROOT)
+sys.path.append(PROJECR_ROOT)
+
+
 from ultralytics import YOLO
 import cv2
 import numpy as np
 import streamlit as st
-import os
 
 
 def detect_helmet(image):
